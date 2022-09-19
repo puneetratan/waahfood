@@ -1,0 +1,205 @@
+<!-- Header component -->
+<div class="w-header">
+  <header class="w-head">
+    <div class="w-head-logo">
+      <img src="" class="w-head-logo-img" />
+    </div>
+    <div class="w-head-mainnav">
+      <mat-toolbar>
+        <button mat-button>Home</button>
+        <button mat-button>Home</button>
+        <button mat-button>Home</button>
+        <button mat-button>Home</button>
+      </mat-toolbar>
+      <div class="w-head-navRight">
+        <button mat-stroked-button class="secondary-btn-sm">Login</button>
+        <button mat-button class="primary-btn-sm">Order Now</button>
+      </div>
+    </div>
+  </header>
+</div>
+<!-- Header component end -->
+<!-- Main body component -->
+<main>
+  <section>
+    <div class="w-banner">
+      <div class="w-banner-img">
+        <img src="../assets/img/banner-image.jpg" class="w-banner-img-file" />
+      </div>
+      <div class="w-banner-content">
+        <div class="w-banner-content-in">
+          <h1>Authentic Homestyle Indian Food Thali/Meals</h1>
+          <p>We take responsibility for your daily Indian meal, forget the logistics of food</p>
+          <button class="primary-btn-lg" mat-flat-button>Order Now</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-how-it-works">
+      <div class="w-how-it-works-in">
+        <h2>How it works?</h2>
+        <ul>
+          <li><img src="../assets/icons/calendar.svg" />
+            <p>Choose your date</p>
+          </li>
+          <li><img src="../assets/icons/spoon-knife.svg" />
+            <p>Choose your dishes</p>
+          </li>
+          <li><img src="../assets/icons/cook.svg" />
+            <p>We cook fresh</p>
+          </li>
+          <li><img src="../assets/icons/truck.svg" />
+            <p>Express Delivery</p>
+          </li>
+          <li><img src="../assets/icons/happy.svg" />
+            <p>Enjoy your fresh/warm meal</p>
+          </li>
+        </ul>
+        <div class="w-how-it-works-in-btn">
+          <button class="secondary-btn-sm" mat-stroked-button>Get Started</button>
+        </div>
+      </div>
+    </div>
+    <div class="w-why">
+      <h2>How it works?</h2>
+      <div class="w-why-list">
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-1.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-2.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-3.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-4.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-5.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+        <div class="w-why-list-item">
+          <img src="../assets/img/img-1.jpg" />
+          <p>Familiar Indian flavors wherever you are</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-inception">
+      <div class="w-inception-in">
+        <div class="w-inception-in-head">
+          <h2>Inception of Waah</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. </p>
+        </div>
+        <div class="w-inception-in-teaser">
+          <div class="w-inception-in-teaser-img">
+            <img src="../assets/img/img-4.jpg" />
+            <span><img src="../assets/icons/play3.svg" /></span>
+          </div>
+          <div class="w-inception-in-teaser-cont">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+              ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-slick">
+      <div class="w-slick-in">
+        <h2>The Meal/Thali</h2>
+
+        <ngx-slick-carousel class="carousel w-slick-slider" #slickModal="slick-carousel" [config]="slideConfig"
+          (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+          (beforeChange)="beforeChange($event)">
+          <div ngxSlickItem *ngFor="let slide of slides" class="slide w-slick-slider-item">
+            <img src="{{ slide.img }}" alt="" width="100%">
+            <div class="w-slick-slider-item-cont">
+              <h3>Ingredients</h3>
+              <ul>
+                <li>100 gms Rice</li>
+                <li>2 Rotis</li>
+                <li>100 gms dry sabzi/dish</li>
+                <li>100 gms curry sabzi/dish</li>
+              </ul>
+            </div>
+          </div>
+        </ngx-slick-carousel>
+        <!-- <button (click)="addSlide()">Add</button>
+        <button (click)="removeSlide()">Remove</button>
+        <button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+        <button (click)="slickModal.unslick()">unslick</button> -->
+
+
+      </div>
+    </div>
+
+  </section>
+</main>
+<!-- Header component end -->
+
+<!-- Footer component -->
+<footer>
+  <div class="w-footer">
+    <div class="w-footer-abt">
+      <h3>About</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+    <div class="w-footer-why">
+      <h3>Why Waah?</h3>
+      <ul>
+        <li>Familiar Indian flavors wherever you are </li>
+        <li>Freshly cooked meals </li>
+        <li>Express Delivery </li>
+        <li>Quality</li>
+        <li>Values connect: sustainability</li>
+        <li>Our story </li>
+      </ul>
+    </div>
+    <div class="w-footer-contact">
+      <h3>Contact Information</h3>
+      <ul>
+        <li>
+          <img src="../assets/icons/location.svg" alt="">
+          <p>220 Olentangy Meadows Dr, 43532</p>
+        </li>
+        <li>
+          <img src="../assets/icons/phone.svg" alt="">
+          <p>Customer Service:
+            +1 618-447-5000</p>
+        </li>
+        <li>
+          <img src="../assets/icons/envelop.svg" alt="">
+          <p>support@waah.com</p>
+        </li>
+      </ul>
+    </div>
+    <div class="w-footer-newsletter">
+      <h3>Newsletter</h3>
+      <p>Keep up with our upcoming news and updates. Enter your email and subscribe to our newsletter</p>
+    </div>
+  </div>
+  <div class="w-footer-bottom">
+    <div class="w-footer-bottom-in">
+      <div class="w-footer-bottom-in-site">
+        <p>© 2022 waah.</p>
+      </div>
+      <div class="w-footer-bottom-in-privacyPolicy">
+        <span>Terms & Conditions</span>
+        <span>Privacy Policy</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer component end -->

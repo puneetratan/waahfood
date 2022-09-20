@@ -1,6 +1,7 @@
 # Specifies intentionally untracked files to ignore when using Git
 # http://git-scm.com/docs/gitignore
 www/
+dist/
 
 *~
 *.sw[mnpcod]
@@ -40,6 +41,4 @@ homekichen_ipa/
 GoogleService-Info.plist
 config.xml
 google-services.json
-package-lock.json
-package.json
 node_modules

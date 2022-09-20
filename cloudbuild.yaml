@@ -1,12 +1,12 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'gcr.io/waahfood-dev/puneetratan/waahfood:$SHORT_SHA', '.']
+  args: ['build', '-t', 'gcr.io/waahfood/puneetratan/waahfood:$SHORT_SHA', '.']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push', 'gcr.io/waahfood-dev/puneetratan/waahfood:$SHORT_SHA']
+  args: ['push', 'gcr.io/waahfood/puneetratan/waahfood:$SHORT_SHA']
 
 - name: 'gcr.io/cloud-builders/gcloud'
-  args: ['beta', 'run', 'deploy', 'waahfood-dev', '--region=us-central1', '--platform=managed', '--image=gcr.io/waahfood-dev/puneetratan/waahfood:$SHORT_SHA']
+  args: ['beta', 'run', 'deploy', 'waahfood', '--region=us-central1', '--platform=managed', '--image=gcr.io/waahfood/puneetratan/waahfood:$SHORT_SHA']
 
 # TODO for auto authentication
 # - name: 'gcr.io/cloud-builders/gcloud'
